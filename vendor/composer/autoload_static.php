@@ -6,15 +6,25 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit55208c511cf8e97d8c1ded4af184a728
 {
-    public static $classMap = array (
-        'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'Route' => __DIR__ . '/../..' . '/lib/Route.php',
+    public static $prefixLengthsPsr4 = array (
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit55208c511cf8e97d8c1ded4af184a728::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit55208c511cf8e97d8c1ded4af184a728::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit55208c511cf8e97d8c1ded4af184a728::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
